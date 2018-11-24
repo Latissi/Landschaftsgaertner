@@ -4,4 +4,7 @@ public class Pflanze
   public Pflanze()
   {
   }
+  
+  public static class BeetKonfigurator{
+  }
 }
