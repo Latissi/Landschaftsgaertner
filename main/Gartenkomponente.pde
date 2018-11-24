@@ -3,10 +3,23 @@ public abstract class Gartenkomponente
   
   private Pos position;
   private Size groesse;
+  private Anzeige anz;
   
-  public Gartenkomponente(int x = 0, int y = 0, int b = 10, int h =10){
+  public Gartenkomponente(int x , int y, int b, int h)
+  {
     this.position = new Pos(x,y);
     this.groesse = new Size(b,h);
+    anz = new Anzeige();
+  }
+  
+  public Gartenkomponente()
+  {
+    anz = new Anzeige();
+  }
+  
+  public void zeichnen()
+  {
+    //"anz...." noch zu implementieren
   }
   
   public Size getSize(){

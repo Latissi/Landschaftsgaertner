@@ -1,3 +1,3 @@
-public abstract class Blatt : Gartenkomponente
+public abstract class Blatt extends Gartenkomponente
 {
 }
