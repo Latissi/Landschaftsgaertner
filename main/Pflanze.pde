@@ -5,6 +5,5 @@ public class Pflanze
   {
   }
   
-  public static class BeetKonfigurator{
-  }
+
 }
