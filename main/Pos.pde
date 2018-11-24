@@ -5,4 +5,7 @@ public class Pos{
     this.x = x;
     this.y = y;
   }
+  public Pos()
+  {
+  }
 }

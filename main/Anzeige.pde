@@ -1,6 +1,13 @@
-public class Anzeige{
+public class Anzeige
+{
+  private Size groesse;
+  private Pos position;
   
-  public Anzeige()
+  public Anzeige(Size groesse, Pos position)
   {
+    this.groesse = groesse;
+    this.position = position;
   }
+  
+  //public zeichnen
 }

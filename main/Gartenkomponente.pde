@@ -14,6 +14,8 @@ public abstract class Gartenkomponente
   
   public Gartenkomponente()
   {
+    position = new Pos();      //evtl. vorinitialisieren
+    groesse = new Size();     //evtl. vorinitialisieren
     anz = new Anzeige();
   }
   
