@@ -4,26 +4,23 @@ public abstract class Gartenkomponente
   private Pos position;
   private Size groesse;
   private Anzeige anz;
-  private Farbe farbe;
+  private String farbe;
   
-  public Gartenkomponente(int x , int y, int b, int h, Farbe farbe)
+  public Gartenkomponente(float x , float y, float b, float h, String farbe)
   {
     this.position = new Pos(x,y);
     this.groesse = new Size(b,h);
     this.farbe = farbe;
-    anz = new Anzeige();
+    anz = new Anzeige(this);
   }
-  
   public Gartenkomponente()
   {
-    position = new Pos();      //evtl. vorinitialisieren
-    groesse = new Size();     //evtl. vorinitialisieren
-    anz = new Anzeige();
   }
   
-  public void zeichnen()
+  
+  public void anzeigen()
   {
-    //"anz...." noch zu implementieren
+    anz.zeichnen();
   }
   
   public Size getSize(){
@@ -35,13 +32,23 @@ public abstract class Gartenkomponente
     return this.position;
   }
   
-  public void setSize(int b, int h)
+  public String getFarbe()
+  {
+    return this.farbe;
+  }
+  
+  public void setFarbe(String farbe)
+  {
+    this.farbe = farbe;
+  }
+  
+  public void setSize(float b, float h)
   {
     this.groesse.breite = b;
     this.groesse.hoehe = h;
   }
   
-  public void setPos(int x, int y)
+  public void setPos(float x, float y)
   {
     this.position.x = x;
     this.position.y = y;

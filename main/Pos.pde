@@ -1,7 +1,7 @@
 public class Pos{
-  public int x;
-  public int y;
-  public Pos(int x, int y){
+  public float x;
+  public float y;
+  public Pos(float x, float y){
     this.x = x;
     this.y = y;
   }

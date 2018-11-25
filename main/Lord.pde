@@ -1,11 +1,27 @@
 public class Lord
 {
-  private String name;
   private Landschaftsgaertner gaertner;
+  private Garten garten;
   
-  public Lord(String name, Landschaftsgaertner gaertner)
+  public Lord(Landschaftsgaertner gaertner)
   {
-    this.name = name;
     this.gaertner = gaertner;
+  }
+  
+  public void betrachten()
+  {
+    garten.anzeigen();
+  for(Gartenkomponente k : garten.liefereElemente()){
+      k.anzeigen();
+    }
+  }
+  
+  public void gartenAnlegenLassen()
+  {
+    this.garten = gaertner.gartenErstellen();
+  }
+  
+  public void neuBepflanzenLassen()
+  {
   }
 }
