@@ -12,28 +12,34 @@ public static class BeetKonfigurator
     pflanzen = new ArrayList();
   }
   
-  public void setCoordinates(int x_pos, int y_pos)
+  public BeetKonfigurator setCoordinates(int x_pos, int y_pos)
   {
     this.x_pos = x_pos;
     this.y_pos = y_pos;
+    return this;
   }
   
-  public void setSize(int breite, int hoehe)
+  public BeetKonfigurator setSize(int breite, int hoehe)
   {
     this.hoehe = hoehe;
     this.breite = breite;
+    return this;
   }
   
-  public void setColour(Farbe farbe)
+  public BeetKonfigurator setColour(Farbe farbe)
   {
     this.farbe = farbe;
+    return this;
   }
   
-  public void beetErstellen()
+  public Beet beetErstellen()
   {
+    KonfigurationPruefen();
+    new(
+    return 
   }
   
-  private void pruefeUeberschneidung()
+  private void konfigurationPruefen()
   {
   }
   

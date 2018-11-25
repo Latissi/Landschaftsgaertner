@@ -2,7 +2,8 @@ public abstract class Kompositum extends Gartenkomponente
 {
   private ArrayList <Gartenkomponente> vektor;
   
-  public Kompositum(){
+  public Kompositum(int x , int y, int b, int h, Farbe farbe){
+    super(x,y,b,h,farbe);
     vektor = new ArrayList();
   }
   

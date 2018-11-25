@@ -4,11 +4,13 @@ public abstract class Gartenkomponente
   private Pos position;
   private Size groesse;
   private Anzeige anz;
+  private Farbe farbe;
   
-  public Gartenkomponente(int x , int y, int b, int h)
+  public Gartenkomponente(int x , int y, int b, int h, Farbe farbe)
   {
     this.position = new Pos(x,y);
     this.groesse = new Size(b,h);
+    this.farbe = farbe;
     anz = new Anzeige();
   }
   

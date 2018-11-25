@@ -9,5 +9,9 @@ public class Anzeige
     this.position = position;
   }
   
+  public Anzeige()
+  {
+  }
+  
   //public zeichnen
 }
