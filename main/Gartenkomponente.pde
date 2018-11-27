@@ -1,27 +1,27 @@
 public abstract class Gartenkomponente
 {
   
-  private Pos position;
-  private Size groesse;
-  private Anzeige anz;
-  private String farbe;
+  public Pos position;
+  public Size groesse;
+  public String farbe;
+  public ArrayList <Gartenkomponente> komponenten;
+  public Anzeige anz;
   
   public Gartenkomponente(float x , float y, float b, float h, String farbe)
   {
     this.position = new Pos(x,y);
     this.groesse = new Size(b,h);
     this.farbe = farbe;
-    anz = new Anzeige(this);
-  }
-  public Gartenkomponente()
-  {
+    komponenten = new ArrayList<Gartenkomponente>();
+    anz = new Anzeige();
   }
   
-  
-  public void anzeigen()
-  {
-    anz.zeichnen();
+  public void anzeigen(){
+    anz.anzeigeErstellen(this);
   }
+  
+  public abstract ArrayList <Gartenkomponente> liefereElemente();
+
   
   public Size getSize(){
     return this.groesse;
@@ -52,5 +52,10 @@ public abstract class Gartenkomponente
   {
     this.position.x = x;
     this.position.y = y;
+  }
+  
+  public boolean isKompositum()
+  {
+    return false;
   }
 }

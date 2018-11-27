@@ -1,4 +1,4 @@
-public class Pflanze extends Blatt
+public abstract class Pflanze extends Blatt
 {
   private BoundingBox box;
   protected ArrayList<float[]> pts;
@@ -21,4 +21,8 @@ public class Pflanze extends Blatt
   {
     box = new BoundingBox(n,e,s,w);
   }
+  
+  public abstract void anzeigen();
+  
+
 }

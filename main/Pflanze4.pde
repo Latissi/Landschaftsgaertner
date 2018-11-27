@@ -1,16 +1,17 @@
-/*class Pflanze4 extends Pflanze
+class Pflanze4 extends Pflanze
 {
-  final float PHI = PI/7;
-  final float startLength = 40;
-  final float x_offset = 20;
-  final float y_offset = 100;
+  static final float PHI = PI/7;
+  static final float startLength = 40;
+  static final float x_offset = 20;
+  static final float y_offset = 100;
   float drawLength;
+  public static final float breite = 2*x_offset;
+  public static final float hoehe = y_offset;
   
-  public Pflanze4(Pos position, int age)
+  public Pflanze4(float x, float y, float b, float h, String farbe, int age)
   {
-    super();
+    super(x,y,b,h,farbe);
     this.age = age;  
-    this.position = new Pos(position.x, position.y);
     this.pts = new ArrayList<float[]>();
     this.ts = new TurtleStack();
     createLSystem();
@@ -33,8 +34,8 @@
     float x_temp, y_temp, maxX, maxY, minX, minY;
     int repeat = 1;
     Turtle turtle = new Turtle(0.4 * height, 0.98 * width, HALF_PI);
-    turtle.setX(this.position.x + x_offset);
-    turtle.setY(this.position.x + y_offset);
+    turtle.setX(this.getPos().x + x_offset);
+    turtle.setY(this.getPos().y + y_offset);
     maxX = minX = turtle.getX();
     maxY = minY = turtle.getY();
     System.out.println("Start x: " + turtle.getX() + "Start y: " + turtle.getY());
@@ -93,15 +94,14 @@
     }
     //System.out.println(" Min X: " + minX + " Max X: " + maxX + " Min Y: " + minY + " Max Y: " + maxY);
     //hier muss BoundingBox erstellt werden!!
-    setBoundingBox(minY, minX, maxY, maxX);
-    this.groesse = new Size((int)(maxX-minX), (int)(maxY-minY));  
+    setBoundingBox(minY, minX, maxY, maxX);  
   }
   
-  public void zeichnen() 
+  public void anzeigen() 
   {
     for (float[] pt : pts) {
       stroke(0,0,0);
       line(pt[0], pt[1], pt[2], pt[3]);
     }
   }
-}*/
+}

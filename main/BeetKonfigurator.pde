@@ -1,4 +1,4 @@
-public static class BeetKonfigurator
+/*public static class BeetKonfigurator
  {
   private ArrayList <Pflanze> pflanzen;
   private String farbe;
@@ -65,9 +65,9 @@ public static class BeetKonfigurator
       }
       if (intersection==true)
         break;
-    }*/
+    }
     
     return intersection;
   }
   
-}
+}*/

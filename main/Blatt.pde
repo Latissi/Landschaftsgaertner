@@ -5,7 +5,10 @@ public abstract class Blatt extends Gartenkomponente
   {
     super(x,y,b,h,farbe);
   }
-  public Blatt()
+  
+  public ArrayList <Gartenkomponente> liefereElemente()
   {
+    print("liefereElemente von Blatt\n");
+    return komponenten;
   }
 }

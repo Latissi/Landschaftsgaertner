@@ -1,27 +1,28 @@
 public abstract class Kompositum extends Gartenkomponente
 {
-  private ArrayList <Gartenkomponente> vektor;
+  private ArrayList <Gartenkomponente> komponenten;
   
   public Kompositum(float x , float y, float b, float h, String farbe){
     super(x,y,b,h,farbe);
-    vektor = new ArrayList();
+    komponenten = new ArrayList();
   }
   
   public ArrayList <Gartenkomponente> liefereElemente()
   {
-    return this.vektor;
+    print("liefereElemente von Kompositum\n");
+    return this.komponenten;
   }
   
   public void hinzufuegen(Gartenkomponente komponente)
   {
-    this.vektor.add(komponente);
+    this.komponenten.add(komponente);
   }
   
   public void entfernen (Gartenkomponente komponente)
   {
-    for(int i = 0; i< vektor.size(); i++){
-      if(vektor.get(i) == komponente)
-        vektor.remove(i);
+    for(int i = 0; i< komponenten.size(); i++){
+      if(komponenten.get(i) == komponente)
+        komponenten.remove(i);
     }
   }
   

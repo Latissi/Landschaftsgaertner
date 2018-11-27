@@ -4,21 +4,34 @@ public class Anzeige
   private Pos position;
   private String farbe;
   
-  public Anzeige(Gartenkomponente k)
+  public Anzeige()
   {
-    this.groesse = k.getSize();
-    this.position = k.getPos();
-    this.farbe = k.getFarbe();
   }
   
-  
-  public void zeichnen()
+  public void anzeigeErstellen(Gartenkomponente k)
   {
-    faerben();
-    rect(position.x, position.y, groesse.breite, groesse.hoehe);
+    zeichnen(k);
+    
+    if (k.liefereElemente().size() >= 1)
+    {
+      print("Starte Rekursion \n");
+    for(Gartenkomponente g : k.liefereElemente())
+    {
+      g.anzeigen();
+    }
+    }
+  }
+    
+  
+  
+  
+  private void zeichnen(Gartenkomponente k)
+  {
+    faerben(k.farbe);
+    rect(k.position.x, k.position.y, k.groesse.breite, k.groesse.hoehe);
   }
   
-  private void faerben()
+  private void faerben(String farbe)
   {
     switch(farbe)
     {

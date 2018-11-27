@@ -5,7 +5,5 @@ public class Size{
     this.breite = breite;
     this.hoehe = hoehe;
   }
-  public Size()
-  {
-  }
+
 }

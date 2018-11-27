@@ -3,7 +3,7 @@ public class Lord
   private Landschaftsgaertner gaertner;
   private Garten garten;
   
-  public Lord(Landschaftsgaertner gaertner)
+  public Lord(Landschaftsgaertner gaertner, Anzeige anz)
   {
     this.gaertner = gaertner;
   }
@@ -11,9 +11,6 @@ public class Lord
   public void betrachten()
   {
     garten.anzeigen();
-  for(Gartenkomponente k : garten.liefereElemente()){
-      k.anzeigen();
-    }
   }
   
   public void gartenAnlegenLassen()

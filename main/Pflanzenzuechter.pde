@@ -1,30 +1,30 @@
-/*public class Pflanzenzuechter
+public class Pflanzenzuechter
 {
   public Pflanzenzuechter()
   {
   }
   
-  public Pflanze pflanzen(int choice, Pos position, int age)
+  public Pflanze pflanzen(int choice, float x, float y, float b, float w, String farbe, int age)
   {
     Pflanze neuePflanze;
     
     switch (choice)
     {
       case 1:
-        neuePflanze = new Pflanze1(position, age);
+        neuePflanze = new Pflanze1(x, y, b, w, farbe, age);
         return neuePflanze;
       case 2:
-        neuePflanze = new Pflanze2(position, age);
+        neuePflanze = new Pflanze2(x, y, b, w, farbe, age);
         return neuePflanze;
       case 3:
-        neuePflanze = new Pflanze3(position, age);
+        neuePflanze = new Pflanze3(x, y, b, w, farbe, age);
         return neuePflanze;
       case 4:
-        neuePflanze = new Pflanze4(position, age);
+        neuePflanze = new Pflanze4(x, y, b, w, farbe, age);
         return neuePflanze;
       default:
-        System.err.println("Die Nummer " +choice+ " kann nicht vom Pflanzenzuechter geliefert werden!");
-        throw (new Exception("Failure while creating a plant"));
+        neuePflanze = new Pflanze1(x, y, b, w, farbe, age);
+        return neuePflanze;
     }
   }     
-}*/
+}
